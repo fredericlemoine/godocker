@@ -280,7 +280,7 @@ func (r *RAxMLTool) Execute() (err error) {
 		return
 	}
 
-	raxmloutput = fmt.Sprintf("%s/RAxML_bestTree.TEST", indir)
+	raxmloutput = fmt.Sprintf("%s/RAxML_bestTree.%s", indir, r.RunName())
 
 	// When execution is over, we move the output file to the given name
 	os.Rename(raxmloutput, r.OutputTree())
